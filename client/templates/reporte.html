@@ -1,0 +1,41 @@
+<div class="panel panel-default" ng-init="getReports()">
+	<div class="panel-heading">
+	  <p class="panel-title"><span style="color:#5bc0de;" class="glyphicon glyphicon-list"> </span>
+      Reportes
+|    </p>
+	</div>
+	<div style="margin-left:1%;">
+  	<h2>Cantidad de horas trabajadas por persona</h2>
+	</div>
+  <div class="panel-body">
+    <form ng-submit="getHoursByDay()">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input required type="text" class="form-control" id="nombre" ng-model="report.nombre">
+			<div>
+				<p style="color:red;">{{report.errorUser}}</p>
+			</div>
+    </div>
+    <div class="form-group">
+      <label for="f_con">Fecha a consultar:</label>
+      <input required type="text" minlength="10" maxlength="10" placeholder="Dia-Mes-Año. Ejemplo: 01-01-2000" class="form-control" id="f_con" ng-model="report.f_con">
+    </div>
+    <button type="submit" style="color:white;" class="btn btn-success">Calcular horas</button>
+    <a href="#/" class="btn btn-default"> Cancelar </a>
+		<table class="table table-striped">
+			<thead>
+			<tr>
+				<th>Nombre</th>
+				<th>Día</th>
+				<th>Horas trabajadas</th>
+			</tr>
+			</thead>
+			<tbody>
+				<td>{{report.nombre}}</td>
+				<td>{{report.f_con}}</td>
+				<td>{{report.hours}}</td>
+			</tbody>
+		</table>
+  </form>
+  </div>
+</div>
