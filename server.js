@@ -2,6 +2,18 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var moment = require('moment');
+
+//var MongoClient = require("mongodb").MongoClient;
+//var username = process.env.MONGO_USER;
+//var password = process.env.MONGO_PW;
+var username = "personalDB";
+var password = "personalDB";
+var url = `mongodb://${username}:${password}@ds143221.mlab.com:43221/personals`;
+
+//MongoClient.connect(url, )
+
+var mongoose = require('mongoose');
+mongoose.connect(url);
 var Personal = require ("./client/models/personal.js");
 var EntryExit = require ("./client/models/entryexit.js");
 
