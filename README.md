@@ -1,5 +1,5 @@
 
-Personal APP es una aplicación SPA creada con MEAN Stack (MongoDB, Express, AngularJS y NodeJS) con la que puede registrarse el CRUD del personal, registrar entradas y salidas (egresos y egresos) de los mismos y generar reporte sobre las horas trabajadas en un determinado día.
+Personal APP es una aplicación SPA creada con MEAN Stack (MongoDB, Express, AngularJS y NodeJS) con la que puede registrarse el CRUD del personal, registrar entradas y salidas (ingresos y egresos) de los mismos y generar reporte sobre las horas trabajadas en un determinado día.
 
 
 
